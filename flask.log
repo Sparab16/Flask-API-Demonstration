@@ -1,0 +1,15 @@
+INFO:werkzeug: * Detected change in 'S:\\Work\\Full Stack Data Science\\Home Work\\Flask Homework\\app.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 212-209-319
+INFO:werkzeug: * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO:werkzeug: * Restarting with windowsapi reloader
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 169-348-758
+INFO:werkzeug: * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO:werkzeug:127.0.0.1 - - [31/May/2021 21:43:07] "[37mGET / HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [31/May/2021 21:43:08] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [31/May/2021 21:43:12] "[37mGET /create_table/render HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [31/May/2021 21:43:14] "[37mGET /insert_table/render HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [31/May/2021 21:43:17] "[37mGET /delete_from_table/render HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [31/May/2021 21:43:20] "[37mGET /download/render HTTP/1.1[0m" 200 -
