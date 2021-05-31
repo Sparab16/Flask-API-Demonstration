@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Delete from Table</title>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</head>
+<body>
+
+ <div class="jumbotron jumbotron-fluid">
+      <div class="container">
+        <h1 class="display-4 text-center">Delete from table</h1>
+      </div>
+    </div>
+
+    <div class="container">
+        <div class="accordion" id="accordionExample">
+
+          <div class="card">
+            <div class="card-header" id="headingOne">
+              <h5 class="mb-0">
+                <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                  Delete using Mongo Client
+                </button>
+              </h5>
+            </div>
+
+            <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+              <div class="card-body">
+                  <div class="form">
+                      <form action = '/mongo/delete_from_table' method="POST">
+
+                         <div class="form-group">
+                            <label for="formGroupExampleInput">MongoDB Client URL</label>
+                            <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Enter client url" name = 'client_url'>
+                          </div>
+
+                          <div class="form-group">
+                            <label for="formGroupExampleInput2">Database Name</label>
+                            <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Enter the name of database" name = 'database_name'>
+                          </div>
+
+                          <div class="form-group">
+                            <label for="formGroupExampleInput3">Table Name</label>
+                            <div class="input-group mb-3">
+                              <input type="text" id="formGroupExampleInput3" class="form-control" placeholder="Enter the name of the table" name = 'table_name' aria-describedby="button-addon2">
+                            </div>
+                          </div>
+
+                        <div class="input-group mb-3">
+                          <div class="input-group-prepend">
+                            <span class="input-group-text">Filter</span>
+                          </div>
+                          <input type="text" class="form-control" placeholder='{"name" : "shreyas"}...' aria-describedby="basic-addon1" name = 'filter_value'>
+                        </div>
+
+
+                      <button type="submit" class="btn btn-outline-primary">Delete from Table</button>
+
+                      </form>
+                  </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-header" id="headingTwo">
+              <h5 class="mb-0">
+                <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                  Delete using MySQL Client
+                </button>
+              </h5>
+            </div>
+
+            <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+              <div class="card-body">
+                  <div class="form">
+                      <form action = "/mysql/delete_from_table" method="POST">
+                        <div class="form-group">
+                            <div class="input-group">
+                              <div class="input-group-prepend">
+                                <span class="input-group-text">Host, Username, Password</span>
+                              </div>
+                              <input type="text" placeholder="Hostname" class="form-control" name = 'hostname'>
+                              <input type="text" placeholder="Username" class="form-control" name = 'username'>
+                              <input type="password" placeholder="Password" class="form-control" name = 'password'>
+                            </div>
+                          </div>
+                      <div class="form-group">
+                        <label for="db_sql">Database Name</label>
+                        <input type="text" class="form-control" id="db_sql" placeholder="Enter the name of database" name = 'database_name'>
+                      </div>
+
+                      <div class="form-group">
+                        <label for="table_sql">Table Name</label>
+                        <input type="text" class="form-control" id="table_sql" placeholder="Enter the name of table" name = 'table_name'>
+                      </div>
+
+                          <div class="input-group mb-3">
+                          <div class="input-group-prepend">
+                            <span class="input-group-text">Where</span>
+                          </div>
+                          <input type="text" class="form-control" placeholder="id='1'..." aria-describedby="basic-addon1" name = 'where_value'>
+                        </div>
+
+                      <button type="submit" class="btn btn-outline-primary">Delete from Table</button>
+                    </form>
+                  </div>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-header" id="headingThree">
+              <h5 class="mb-0">
+                <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                  Delete using Cassandra Client
+                </button>
+              </h5>
+            </div>
+            <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+              <div class="card-body">
+                  <div class="form">
+                      <form action="/cassandra/delete_from_table" method="POST">
+
+                         <div class="form-group">
+                            <div class="input-group">
+                              <div class="input-group-prepend">
+                                <span class="input-group-text">Username, Password</span>
+                              </div>
+                              <input type="text" placeholder="Username" class="form-control" name = 'username'>
+                              <input type="password" placeholder="Password" class="form-control" name = 'password'>
+                            </div>
+                          </div>
+
+                      <div class="input-group mb-3">
+                          <div class="input-group-prepend">
+                            <span class="input-group-text" id="cloud_config">Cloud Config Path</span>
+                          </div>
+                          <input type="text" class="form-control" placeholder="Enter complete path of secure_connect_bundle file" aria-describedby="basic-addon1" name = 'secure_path'>
+                      </div>
+
+                      <div class="form-group">
+                        <label for="formGroupExampleInput2">Keyspace Name</label>
+                        <input type="text" class="form-control" id="db_cassandra" placeholder="Enter the name of Keyspace" name = 'keyspace_name'>
+                      </div>
+
+                      <div class="form-group">
+                        <label for="table_cassandra">Table Name</label>
+                        <input type="text" class="form-control" id="table_cassandra" placeholder="Enter the name of table" name = 'table_name'>
+                      </div>
+
+
+                      <div class="input-group mb-3">
+                      <div class="input-group-prepend">
+                        <span class="input-group-text">Where</span>
+                      </div>
+                      <input type="text" class="form-control" placeholder="id='1'..." aria-describedby="basic-addon1" name = 'where_value'>
+                    </div>
+
+                          <button type="submit" class="btn btn-outline-primary">Delete from Table</button>
+
+                    </form>
+                  </div>
+              </div>
+            </div>
+          </div>
+        </div>
+    </div>
+
+</body>
+</html>

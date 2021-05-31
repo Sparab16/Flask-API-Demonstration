@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Flask Demonstration</title>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</head>
+<body>
+
+    <div class="jumbotron jumbotron-fluid">
+      <div class="container">
+        <h1 class="display-4 text-center">Welcome to Flask API Demonstration</h1>
+        <p class="lead text-center">Here you can easily create, read, update and delete the database files using an API</p>
+      </div>
+    </div>
+
+    <div class="container">
+
+        <div class="card-deck">
+          <div class="card border-dark mb-3">
+            <img class="card-header card-img-top" src="https://cacm.acm.org/system/assets/0002/7119/042117_Theodo_MongoDB.large.jpg?1492791427&1492791427" alt="MongoDB Image">
+            <div class="card-body text-dark">
+              <h5 class="card-title">Mongo DB</h5>
+              <p class="card-text">MongoDB is a source-available cross-platform document-oriented database program. Classified as a NoSQL database program, MongoDB uses JSON-like documents with optional schemas. MongoDB is developed by MongoDB Inc. and licensed under the Server Side Public License.</p>
+<!--              <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>-->
+            </div>
+          </div>
+          <div class="card border-dark mb-3">
+            <img class="card-header card-img-top" src="https://pngimg.com/uploads/mysql/mysql_PNG29.png" alt="MySQL Image">
+            <div class="card-body text-dark">
+              <h5 class="card-title">MySQL DB</h5>
+              <p class="card-text">MySQL is an open-source relational database management system. Its name is a combination of "My", the name of co-founder Michael Widenius's daughter, and "SQL", the abbreviation for Structured Query Language. A relational database organizes data into one or more data tables in which data types may be related to each other; these relations help structure the data</p>
+<!--              <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>-->
+            </div>
+          </div>
+          <div class="card border-dark mb-3">
+            <img class="card-header card-img-top" src="https://fontmeme.com/images/Cassandra-Logo.jpg" alt="Cassandra Image">
+            <div class="card-body text-dark">
+              <h5 class="card-title">Apache Cassandra</h5>
+              <p class="card-text">Apache Cassandra is a free and open-source, distributed, wide-column store, NoSQL database management system designed to handle large amounts of data across many commodity servers, providing high availability with no single point of failure.</p>
+<!--              <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>-->
+            </div>
+          </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <h1 class="display-4 text-center">We support these CRUD operations</h1>
+                <div class="card-body">
+                  <div class="form">
+                      <form>
+                          <div class="btn-group" role="group" aria-label="Button group with nested dropdown">
+                              <button type="submit" class="btn btn-secondary btn-outline-primary" formaction="/create_table/render">Create Table</button>
+                              <button type="submit" class="btn btn-secondary btn-outline-primary" formaction="/insert_table/render">Insert into Table</button>
+                              <button type="submit" class="btn btn-secondary btn-outline-primary" formaction="/update_table/render">Update into Table</button>
+                              <button type="submit" class="btn btn-secondary btn-outline-primary" formaction="/bulk_insert_table/render">Bulk Insertion into Table</button>
+                              <button type="submit" class="btn btn-secondary btn-outline-primary" formaction="/delete_from_table/render">Delete from Table</button>
+                              <button type="submit" class="btn btn-secondary btn-outline-primary" formaction="/download/render">Download Data from Table</button>
+                          </div>
+                    </form>
+                  </div>
+              </div>
+
+<!--        <div class="accordion" id="accordionExample">-->
+<!--          <div class="card">-->
+<!--            <div class="card-header" id="headingOne">-->
+<!--              <h5 class="mb-0">-->
+<!--                <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">-->
+<!--                  Want to perform operation on MongoDB? Click Here-->
+<!--                </button>-->
+<!--              </h5>-->
+<!--            </div>-->
+
+<!--            <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">-->
+<!--              <div class="card-body">-->
+<!--                  <div class="form">-->
+<!--                      <form>-->
+<!--                          <div class="btn-group" role="group" aria-label="Button group with nested dropdown">-->
+<!--                              <button type="submit" class="btn btn-secondary btn-outline-primary" formaction="/mongo/create_table/render">Create Table</button>-->
+<!--                              <button type="submit" class="btn btn-secondary btn-outline-primary" formaction="/mongo/insert_table/render">Insert into Table</button>-->
+<!--                              <button type="submit" class="btn btn-secondary btn-outline-primary" formaction="/mongo/update_table/render">Update into Table</button>-->
+<!--                              <button type="submit" class="btn btn-secondary btn-outline-primary" formaction="/mongo/bulk_insert_table/render">Bulk Insertion into Table</button>-->
+<!--                              <button type="submit" class="btn btn-secondary btn-outline-primary" formaction="/mongo/delete_from_table/render">Delete from Table</button>-->
+<!--                              <button type="submit" class="btn btn-secondary btn-outline-primary" formaction="/mongo/download/render">Download Data from Table</button>-->
+<!--                          </div>-->
+<!--                    </form>-->
+<!--                  </div>-->
+<!--              </div>-->
+<!--            </div>-->
+<!--          </div>-->
+<!--          <div class="card">-->
+<!--            <div class="card-header" id="headingTwo">-->
+<!--              <h5 class="mb-0">-->
+<!--                <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">-->
+<!--                  Want to perform operation on MySQL? Click Here-->
+<!--                </button>-->
+<!--              </h5>-->
+<!--            </div>-->
+<!--            <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">-->
+<!--              <div class="card-body">-->
+<!--                  <div class="form">-->
+<!--                      <form>-->
+<!--                          <div class="btn-group" role="group" aria-label="Button group with nested dropdown">-->
+<!--                              <button type="submit" class="btn btn-secondary btn-outline-primary" formaction="/MySQL/create_table/render">Create Table</button>-->
+<!--                              <button type="submit" class="btn btn-secondary btn-outline-primary" formaction="/MySQL/insert_table/render">Insert into Table</button>-->
+<!--                              <button type="submit" class="btn btn-secondary btn-outline-primary" formaction="/MySQL/update_table/render">Update into Table</button>-->
+<!--                              <button type="submit" class="btn btn-secondary btn-outline-primary" formaction="/MySQL/bulk_insert_table/render">Bulk Insertion into Table</button>-->
+<!--                              <button type="submit" class="btn btn-secondary btn-outline-primary" formaction="/MySQL/delete_from_table/render">Delete from Table</button>-->
+<!--                              <button type="submit" class="btn btn-secondary btn-outline-primary" formaction="/MySQL/download/render">Download Data from Table</button>-->
+<!--                          </div>-->
+<!--                    </form>-->
+<!--                  </div>-->
+<!--              </div>-->
+<!--            </div>-->
+<!--          </div>-->
+<!--          <div class="card">-->
+<!--            <div class="card-header" id="headingThree">-->
+<!--              <h5 class="mb-0">-->
+<!--                <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">-->
+<!--                  Want to perform operation on Cassandra? Click Here-->
+<!--                </button>-->
+<!--              </h5>-->
+<!--            </div>-->
+<!--            <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">-->
+<!--              <div class="card-body">-->
+<!--                  <div class="form">-->
+<!--                      <form>-->
+<!--                          <div class="btn-group" role="group" aria-label="Button group with nested dropdown">-->
+<!--                              <button type="submit" class="btn btn-secondary btn-outline-primary" formaction="/cassandra/create_table/render">Create Table</button>-->
+<!--                              <button type="submit" class="btn btn-secondary btn-outline-primary" formaction="/cassandra/insert_table/render">Insert into Table</button>-->
+<!--                              <button type="submit" class="btn btn-secondary btn-outline-primary" formaction="/cassandra/update_table/render">Update into Table</button>-->
+<!--                              <button type="submit" class="btn btn-secondary btn-outline-primary" formaction="/cassandra/bulk_insert_table/render">Bulk Insertion into Table</button>-->
+<!--                              <button type="submit" class="btn btn-secondary btn-outline-primary" formaction="/cassandra/delete_from_table/render">Delete from Table</button>-->
+<!--                              <button type="submit" class="btn btn-secondary btn-outline-primary" formaction="/cassandra/download/render">Download Data from Table</button>-->
+<!--                          </div>-->
+<!--                    </form>-->
+<!--                  </div>-->
+<!--              </div>-->
+<!--            </div>-->
+<!--          </div>-->
+<!--        </div>-->
+
+    </div>
+
+
+
+<!--   <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js" integrity="sha384-+YQ4JLhjyBLPDQt//I+STsc9iw4uQqACwlvpslubQzn4u2UU2UFM80nGisd026JF" crossorigin="anonymous"></script>-->
+</body>
+</html>
