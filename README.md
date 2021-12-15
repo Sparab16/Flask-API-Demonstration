@@ -115,8 +115,7 @@ Please include the sample queries and their corresponding results.
 **Server:** 
 - <a href='https://flask.palletsprojects.com/en/2.0.x/' target="_blank">Flask</a>
 
-**Database:** 
-- <a href='https://www.datastax.com/' target="_blank">Cassandra</a>
+**Database:**
 - <a href='https://dev.mysql.com/doc/' target="_blank">MySQL</a>
 - <a href='https://docs.mongodb.com/' target="_blank">MongoDB</a>
 - <a href='https://cassandra.apache.org/doc/latest/' target="_blank">Cassandra</a>
