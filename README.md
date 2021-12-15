@@ -11,32 +11,32 @@ Python flask api is created to perform the CRUD(Create, Delete, Update, Read, Bu
 
 <h3>1. Home Page</h3>
 <p align="center">
-  <img src="./Docs/Home.png" width="400px">
+  <img src="./Docs/Home.png" width="600px">
 </p>
 
 <h3>2. Create Table</h3>
 <p align="center">
-  <img src="./Docs/create_table.png" width="400px">
+  <img src="./Docs/create_table.png" width="600px">
 </p>
 
 <h3>3. Insert into Table</h3>
 <p align="center">
-  <img src="./Docs/insert_table.png" width="400px">
+  <img src="./Docs/insert_table.png" width="600px">
 </p>
 
 <h3>4. Update table</h3>
 <p align="center">
-  <img src="./Docs/update_table.png" width="400px">
+  <img src="./Docs/update_table.png" width="600px">
 </p>
 
 <h3>5. Download</h3>
 <p align="center">
-  <img src="./Docs/download_table.png" width="400px">
+  <img src="./Docs/download_table.png" width="600px">
 </p>
 
 <h3>6. Bulk Insert</h3>
 <p align="center">
-  <img src="./Docs/bulk_insert.png" width="400px">
+  <img src="./Docs/bulk_insert.png" width="600px">
 </p>
   
 ## <center>Run Locally
